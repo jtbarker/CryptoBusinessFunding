@@ -1,35 +1,35 @@
 //Write your own contracts here. Currently compiles using solc v0.4.15+commit.bbb8e64f.
 pragma solidity ^0.4.21;
 
-contract CryptoCookieMonsters {
+contract CryptoBusiness {
   // Property for storing the contract owner
   address public owner;
-  // Coutner property, used for new monster ids
+  // Counter property, used for new business ids
   uint256 counter = 0;
 
-  // Struct, defining our Cookie Monster with name, id and level fields
-  struct CookieMonster {
+  // Struct, defining our Business with name, id and level fields (level is associated with complexity, scope, global reach)
+  struct Business {
     string name;
     uint256 id;
     uint16 level;
   }
 
-  // Array of all of the created Monsters
-  CookieMonster[] public monsters;
+  // Array of all of the created Businesses
+    Business[] public businesses;
 
   // Constructor function, setting the contract owner from msg.sender
-  function CryptoCookieMonsters() public {
+  function CryptoBusinesses() public {
     owner = msg.sender;
   }
 
-  // Function for creating new CookieMonster
-  function createCookieMonster() external {
-    // Created new monster with name Test Monster, id from counter property and default first level
-    // After creating new monster, counter is getting incremented
+  // Function for creating new Business
+  function createBusiness() external {
+    // Created new business with name Test Business, id from counter property and default first level
+    // After creating new business, counter is getting incremented
     // memory atrribute tells compiler that we won't store this variable's data in the contract storage
-    CookieMonster memory newMonster = CookieMonster("Test Monster", counter++, 1);
+    Business memory newBusiness = Business("Test Business", counter++, 1);
 
-    // Pushing our newMonster to the array of monsters
-    monsters.push(newMonster);
+    // Pushing our newBusiness to the array of businesses
+    bsuinesses.push(newBusiness);
   }
 }
