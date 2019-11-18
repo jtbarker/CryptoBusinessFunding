@@ -30,6 +30,6 @@ contract CryptoBusiness {
     Business memory newBusiness = Business("Test Business", counter++, 1);
 
     // Pushing our newBusiness to the array of businesses
-    bsuinesses.push(newBusiness);
+    businesses.push(newBusiness);
   }
 }
